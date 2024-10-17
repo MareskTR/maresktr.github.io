@@ -4,123 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: #2c3e50; /* Koyu bir arka plan rengi */
+        html, body {
+            overflow-x: hidden;
             margin: 0;
             padding: 0;
-            color: #ecf0f1; /* Açık yazı rengi */
+            background: #1a1a1a; /* Koyu arka plan */
+            color: #e0e0e0; /* Açık gri yazı rengi */
+            font-family: 'Roboto', sans-serif;
         }
+
         header {
-            position: relative;
-            overflow: hidden;
             padding: 80px 20px;
             text-align: center;
             color: white;
-            background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(52, 73, 94, 0.9)); /* Gradient arka plan */
+            background: linear-gradient(135deg, rgba(41, 39, 40, 0.9), #320032e6); /* Koyu mor gradient */
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: rgba(46, 204, 113, 0.1); /* Yeşil renkli bir şekil */
-            border-radius: 50%;
-            transform: scaleX(2);
-            z-index: 0; /* Arkada kalması için */
-        }
+
         header h1 {
             margin: 0;
             font-size: 3.5em;
+            font-family: 'Raleway', sans-serif; /* Başlık yazı tipi */
+            color: white; /* Açık mor */
             animation: fadeIn 1s ease-in-out;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Gölgelendirme eklendi */
-            position: relative;
-            z-index: 1; /* Ön planda olması için */
         }
+
         header p {
             font-size: 1.5em;
             margin-top: 10px;
             font-weight: 300;
-            animation: fadeIn 1s ease-in-out 0.5s;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Gölgelendirme eklendi */
-            position: relative;
-            z-index: 1; /* Ön planda olması için */
         }
+
         .profile-image {
             width: 250px;
             height: 250px;
             border-radius: 50%;
             margin: 20px auto;
             display: block;
-            border: 5px solid white;
+            border: 5px solid #ffffff; /* Açık mor */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
             object-fit: cover;
             animation: slideIn 1s forwards;
             animation-delay: 1s;
-            transform: scale(1.1);
-            transition: transform 0.3s;
         }
-        .profile-image:hover {
-            transform: scale(1.05);
-        }
+
         section {
             padding: 40px;
             max-width: 800px;
             margin: 30px auto;
-            background: #34495e; /* Koyu gri tonları */
+            background: #2c2c2c; /* Koyu gri tonları */
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
             position: relative;
             overflow: hidden;
         }
-        section:hover {
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-            transform: translateY(-5px);
-        }
+
         h2 {
-            color: #1abc9c; /* Açık yeşil tonları */
-            border-bottom: 2px solid #1abc9c;
+            color: #ffcc00; /* Sarımsı renk */
+            border-bottom: 2px solid #ffcc00; /* Alt çizgi rengi */
             padding-bottom: 10px;
-            font-size: 1.8em;
+            font-size: 2em;
             margin-top: 20px;
-            animation: fadeIn 1s ease-in-out;
         }
+
         p {
             line-height: 1.8;
             font-size: 1.1em;
-            margin: 15px 0;
-            animation: fadeIn 1s ease-in-out;
         }
+
         a {
-            color: #1abc9c; /* Açık yeşil tonları */
+            color: #7c2b2b; /* Açık mavi */
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
+            padding: 10px 15px;
+            border: 2px solid transparent;
+            border-radius: 5px;
         }
+
         a:hover {
             text-decoration: underline;
-            color: #16a085; /* Daha koyu yeşil tonları */
+            color: #ffcc00; /* Üzerine gelince sarı */
+            border: 2px solid #ffcc00; /* Buton etkisi */
         }
+
         footer {
             text-align: center;
             padding: 20px;
-            background: rgba(44, 62, 80, 0.9);
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            margin-top: 30px;
-            font-size: 0.9em;
+            background: rgba(30, 30, 30, 0.9); /* Koyu arka plan */
+            color: white; /* Açık mor yazı rengi */
             border-top-left-radius: 50px;
             border-top-right-radius: 50px;
+        }
+
+        /* Kaydırma çubuğu stilleri */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #2c2c2c; /* Koyu gri arka plan */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #320032e6; /* Açık mor */
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffcc00; /* Hover rengi */
         }
 
         /* Animasyonlar */
@@ -138,7 +134,7 @@
 <body>
 
 <header>
-    <h1>Hello, I'm Mehmet Akif Yılancı</h1>
+    <h1>Mehmet Akif Yılancı</h1>
     <p>Cyber Security | Network Security</p>
 </header>
 
@@ -149,7 +145,7 @@
     <p>Hello, I’m Akif! I am a 19-year-old student studying cybersecurity at Istinye University. My passion for the exciting realms of the computer world has driven me to deepen my interest in cybersecurity and continuously develop my skills in this field. In today's rapidly evolving technological landscape, digital security is more critical than ever. Therefore, I am actively engaged in my education at Istinye University, focusing on analyzing cyber threats, developing protective strategies, and ensuring the security of the digital world. My goal is to build a solid foundation in cybersecurity and apply my knowledge and skills practically to become an effective expert in the industry.</p>
 
     <h2>Resume</h2>
-    <p>CV <a href="files/cv.pdf" target="_blank">click here</a>.</p>
+    <p><a href="files/cv.pdf" target="_blank">Click here for CV</a></p>
 
     <h2>Contact</h2>
     <p>If you would like to reach me, please contact me via email: <a href="mailto:akifyilancioglu@gmail.com">akifyilancioglu@gmail.com</a></p>
