@@ -240,7 +240,7 @@ button.btn:hover::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: #3c3c3c;
     text-align: center;
     z-index: 999999999;
 }
@@ -309,33 +309,34 @@ button.btn:hover::before {
 /*----------------------------------------------
 *   02. To Top
 *----------------------------------------------*/
-.to_top{
+.to_top {
     position: fixed;
     right: 20px;
     bottom: 55.5px;
-    width: 35px;
-    height: 35px;
-    background: #111;
+    width: 50px; /* Genişlik */
+    height: 50px; /* Yükseklik */
+    background: #d40000; /* Arka plan rengi */
     text-align: center;
-    line-height: 35px;
+    line-height: 50px; /* Yüksekliği ortalamak için */
     cursor: pointer;
     z-index: 99999;
     display: none;
-    -webkit-transition: bottom 0.5s ease-in-out;
-    -moz-transition: bottom 0.5s ease-in-out;
-    -ms-transition: bottom 0.5s ease-in-out;
-    transition: bottom 0.5s ease-in-out;
+    border-radius: 50%; /* Yuvarlak görünüm */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Gölge efekti */
+    transition: all 0.3s ease; /* Tüm geçişler için yumuşak geçiş */
 }
 
-.to_top i{
-    color: #fff;
+.to_top i {
+    color: #fff; /* İkon rengi */
+    font-size: 20px; /* İkon boyutu */
 }
 
-.to_top:hover{
-    position: fixed;
-    right: 20px;
-    bottom: 60px;
+.to_top:hover {
+    bottom: 60px; /* Hover durumunda konum değişikliği */
+    background: #ff4d4d; /* Hover durumunda arka plan rengi değişimi */
+    transform: scale(1.1); /* Hover durumunda büyütme efekti */
 }
+
 
 /*----------------------------------------------
 *   03. Slider Background and header-content
@@ -420,7 +421,7 @@ button.btn:hover::before {
     display: block;
     width: 60px;
     height: 60px;
-    margin: 30px auto 10px;
+    margin: 30px -120px auto;
     position: relative;
     z-index: 9999;
     background: #FF2B42;
@@ -491,7 +492,7 @@ button.btn:hover::before {
 /* menu appearance*/
 .slider .navbar #menu {
     position: absolute;
-    right: 15px;
+    right: -105px;
     top: 30px;
     color: #999;
     width: 60px;
@@ -1153,3 +1154,36 @@ footer .copyright p{
 footer .copyright p a:hover{
     color: #ff2b42 !important;
 }
+     
+
+/*---------------------------------------
+
+/* Genel gövde stil ayarları */
+body {}
+
+::-webkit-scrollbar {
+    width: 10px; /* Dikey kaydırma çubuğu genişliği */
+    background: #333333; /* Arka plan rengi */
+}
+
+/* Kaydırma çubuğunun parçası */
+::-webkit-scrollbar-thumb {
+    background: #d40000; /* Kaydırma çubuğu rengi */
+    border-radius: 10px; /* Köşeleri yuvarlak yapmak için */
+}
+
+/* Kaydırma çubuğu üzerindeki parça hover durumu */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000; /* Hover durumunda koyu kırmızı */
+}
+
+/* Kayıt çubuğu için yatay stil ayarları */
+::-webkit-scrollbar-horizontal {
+    height: 8px; /* Yatay kaydırma çubuğu yüksekliği */
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: #d40000; /* Yatay kaydırma çubuğu rengi */
+    border-radius: 10px; /* Köşeleri yuvarlak yapmak için */
+}
+
