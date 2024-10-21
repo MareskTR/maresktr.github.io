@@ -40,6 +40,7 @@
 		<!-- Include Google Font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,600,700,800,900">
 
+        <script src="https://cdn.jsdelivr.net/npm/countapi-js@1.0.2/dist/countapi.min.js"></script>
 		
 		<!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -66,6 +67,10 @@
             </div><!-- /content -->
         </div>
         <!-- End Loading -->
+
+        <div id="ziyaretci-sayisi" style="position: fixed; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 10px; border-radius: 5px;">
+            Ziyaretçi: <span id="sayac">Yükleniyor...</span>
+        </div>
         
         <!-- Start Section Slider -->
         <section id="home" class="slider">
@@ -404,6 +409,17 @@
         <script src="assets/js/owl.carousel.min.js"></script><!-- Include Owl Carousel Js -->
         <script src="assets/js/smooth-scroll.min.js"></script><!-- Include Smooth Scroll -->
         <script src="assets/js/main.js"></script><!-- Include Custome File Js -->
+
+        <script>
+            // Web sitenizin adını ve benzersiz bir anahtar belirleyin
+            const websiteAdi = 'maresktr.github.io';
+            const sayacAnahtari = 'ziyaretler';
+        
+            // Sayacı artır ve değeri göster
+            countapi.hit(websiteAdi, sayacAnahtari).then((result) => {
+                document.getElementById('sayac').innerText = result.value;
+            });
+        </script>
 
     </body>
 </html>
