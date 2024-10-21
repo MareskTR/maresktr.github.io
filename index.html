@@ -405,15 +405,6 @@
         <script src="assets/js/smooth-scroll.min.js"></script><!-- Include Smooth Scroll -->
         <script src="assets/js/main.js"></script><!-- Include Custome File Js -->
 
-        <div id="visitor-count">Ziyaretçi Sayısı: 0</div>
-
-        <script>
-            fetch('https://api.countapi.xyz/update/maresktr.github.io/ziyaretci?amount=1')
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById('visitor-count').innerText = `Ziyaretçi Sayısı: ${data.value}`;
-                });
-        </script>
 
     </body>
 </html>
